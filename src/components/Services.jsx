@@ -4,17 +4,17 @@ const services = [
   {
     title: "Réalité Augmentée (AR)",
     description: "Nous créons des expériences immersives avec la réalité augmentée pour améliorer l'interaction des utilisateurs avec vos produits.",
-    icon: "src/assets/ar-svgrepo-com.svg", // Replace with an actual image or icon path
+    icon: "../assets/ar-svgrepo-com.svg", // Replace with an actual image or icon path
   },
   {
     title: "Réalité Virtuelle (VR)",
     description: "Offrez à vos clients une immersion totale avec nos solutions de réalité virtuelle adaptées à vos besoins.",
-    icon: "src/assets/vr-svgrepo-com.svg", // Replace with an actual image or icon path
+    icon: "../assets/vr-svgrepo-com.svg", // Replace with an actual image or icon path
   },
   {
     title: "Développement Mobile & Web",
     description: "Nous développons des applications mobiles et web performantes pour répondre aux besoins de votre entreprise.",
-    icon: "src/assets/code-tech-dev-svgrepo-com.svg", // Replace with an actual image or icon path
+    icon: "../assets/code-tech-dev-svgrepo-com.svg", // Replace with an actual image or icon path
   },
 ];
 
