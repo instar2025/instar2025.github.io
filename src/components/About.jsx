@@ -1,20 +1,24 @@
 import { motion } from "framer-motion";
+import MariemImg from "../assets/images/Mariem.jpg";
+import AbdImg from "../assets/images/AbedRazek1.jpg";
+import YassineImg from "../assets/images/Yassine1.jpg";
+
 
 const cofounders = [
   {
     name: "Mariem DHAOUIADI",
     role: "CEO",
-    image: "src/assets/images/Mariem.jpg", // Replace with actual image path
+    image: MariemImg, // ✅ use imported variable
   },
   {
     name: "Abd El Razzak DHAOUIADI",
     role: "COO",
-    image: "src/assets/images/AbedRazek1.jpg", // Replace with actual image path
+    image: AbdImg, // ✅ use imported variable
   },
   {
     name: "Yassine AJROUD",
     role: "CTO",
-    image: "src/assets/images/Yassine1.jpg", // Replace with actual image path
+    image: YassineImg, // ✅ use imported variable
   },
 ];
 

@@ -1,27 +1,38 @@
 import { motion } from "framer-motion";
 
+// ✅ Import icons
+import ARIcon from "../assets/ar-svgrepo-com.svg";
+import VRIcon from "../assets/vr-svgrepo-com.svg";
+import CodeIcon from "../assets/code-tech-dev-svgrepo-com.svg";
+
 const services = [
   {
     title: "Réalité Augmentée (AR)",
-    description: "Nous créons des expériences immersives avec la réalité augmentée pour améliorer l'interaction des utilisateurs avec vos produits.",
-    icon: "../assets/ar-svgrepo-com.svg", // Replace with an actual image or icon path
+    description:
+      "Nous créons des expériences immersives avec la réalité augmentée pour améliorer l'interaction des utilisateurs avec vos produits.",
+    icon: ARIcon, // ✅ imported variable
   },
   {
     title: "Réalité Virtuelle (VR)",
-    description: "Offrez à vos clients une immersion totale avec nos solutions de réalité virtuelle adaptées à vos besoins.",
-    icon: "../assets/vr-svgrepo-com.svg", // Replace with an actual image or icon path
+    description:
+      "Offrez à vos clients une immersion totale avec nos solutions de réalité virtuelle adaptées à vos besoins.",
+    icon: VRIcon, // ✅ imported variable
   },
   {
     title: "Développement Mobile & Web",
-    description: "Nous développons des applications mobiles et web performantes pour répondre aux besoins de votre entreprise.",
-    icon: "../assets/code-tech-dev-svgrepo-com.svg", // Replace with an actual image or icon path
+    description:
+      "Nous développons des applications mobiles et web performantes pour répondre aux besoins de votre entreprise.",
+    icon: CodeIcon, // ✅ imported variable
   },
 ];
 
 export default function Services() {
   return (
-    <section id="services" className="bg-black py-16 px-6 md:px-12 lg:px-24 text-white">
-      <div  className="max-w-4xl mx-auto text-center">
+    <section
+      id="services"
+      className="bg-black py-16 px-6 md:px-12 lg:px-24 text-white"
+    >
+      <div className="max-w-4xl mx-auto text-center">
         <motion.h2
           className="text-4xl font-bold mb-8 text-primaryBlue font-[orbitron]"
           initial={{ opacity: 0, y: 50 }}
@@ -36,7 +47,9 @@ export default function Services() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          Instar propose des solutions innovantes pour améliorer l'expérience de vos utilisateurs et faire évoluer vos projets grâce aux technologies de pointe.
+          Instar propose des solutions innovantes pour améliorer l'expérience
+          de vos utilisateurs et faire évoluer vos projets grâce aux
+          technologies de pointe.
         </motion.p>
       </div>
 
@@ -51,7 +64,11 @@ export default function Services() {
             className="bg-[#1F2937] p-8 rounded-2xl shadow-xl text-center transition-all duration-300 cursor-pointer"
           >
             <div className="text-6xl mb-6">
-              <img src={service.icon} alt={service.title} className="w-20 h-20 mx-auto" /> {/* Icon or Image */}
+              <img
+                src={service.icon} // ✅ imported icon
+                alt={service.title}
+                className="w-20 h-20 mx-auto"
+              />
             </div>
             <motion.h3
               className="text-2xl font-semibold mb-4"

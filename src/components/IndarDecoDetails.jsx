@@ -1,5 +1,5 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import React from "react";
+import { useNavigate } from "react-router-dom";
 
 function IndarDecoDetails() {
   const navigate = useNavigate();
@@ -13,7 +13,7 @@ function IndarDecoDetails() {
           <div>
             <a href="/">
               <img
-                src="src/assets/images/logooooooblanc.png"
+                src="/images/logooooooblanc.png" // ✅ now from public/
                 className="w-32 md:w-40"
                 alt="Instar Logo"
               />
@@ -27,14 +27,23 @@ function IndarDecoDetails() {
         <h1 className="text-4xl font-bold mb-4">Indar Deco</h1>
         <p className="text-gray-300 text-lg">
           Indar Deco est une plateforme de e-commerce spécialisée dans les meubles,
-          intégrant la Réalité Augmentée (AR) et la Réalité Virtuelle (VR) pour une expérience immersive.
+          intégrant la Réalité Augmentée (AR) et la Réalité Virtuelle (VR) pour une
+          expérience immersive.
         </p>
       </div>
 
       {/* Images Section */}
       <div className="max-w-5xl mx-auto mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
-        <img src="/assets/images/indar1.png" alt="Indar Deco Preview 1" className="rounded-lg shadow-md" />
-        <img src="/assets/images/indar2.png" alt="Indar Deco Preview 2" className="rounded-lg shadow-md" />
+        <img
+          src="/images/1726764094685-portrait.png"
+          alt="Indar Deco Preview 1"
+          className="rounded-lg shadow-md"
+        />
+        <img
+          src="/images/dashboard.png"
+          alt="Indar Deco Preview 2"
+          className="rounded-lg shadow-md"
+        />
       </div>
 
       {/* Features Section */}

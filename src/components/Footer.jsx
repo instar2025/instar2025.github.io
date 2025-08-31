@@ -3,6 +3,12 @@ import { FaFacebook, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import emailjs from "emailjs-com";
 import { useRef } from "react";
+
+// ✅ Import partner images
+import LogoApii from "../assets/images/partners/logo-apii.jpg";
+import Ticdce from "../assets/images/partners/ticdce.jpg";
+import Aws from "../assets/images/partners/aws.png";
+
 export default function Footer() {
   const form = useRef();
 
@@ -28,10 +34,9 @@ export default function Footer() {
       );
   };
 
-  
   return (
     <footer id="contact" className="bg-[#284F75] text-white py-12">
-       <div className="container mx-auto px-6">
+      <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Contact Info */}
           <motion.div
@@ -120,7 +125,6 @@ export default function Footer() {
                 <FaInstagram />
               </a>
             </div>
-            
           </motion.div>
 
           {/* Partners */}
@@ -132,26 +136,12 @@ export default function Footer() {
           >
             <h3 className="text-xl font-bold">Nos partenaires</h3>
             <div className="flex space-x-6">
-              <img
-                src="src/assets/images/partners/logo-apii.jpg"
-                alt="APII Manouba"
-                className="h-20"
-              />
-              <img
-                src="src/assets/images/partners/ticdce.jpg"
-                alt="TICDCE"
-                className="h-20"
-              />
-              <img
-                src="src/assets/images/partners/aws.png"
-                alt="AWS"
-                className="h-20"
-              />
+              <img src={LogoApii} alt="APII Manouba" className="h-20" />
+              <img src={Ticdce} alt="TICDCE" className="h-20" />
+              <img src={Aws} alt="AWS" className="h-20" />
             </div>
           </motion.div>
-          
         </div>
-
 
         {/* Privacy Policy Link */}
         <div className="mt-12 text-center">

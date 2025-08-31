@@ -1,12 +1,14 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom"; // ✅ Import Link
+import portrait from "../assets/images/1726764094685-portrait.png"; // ✅ Imported image
 
 const projects = [
   {
     name: "Indar Deco",
     description:
       "Indar Deco est une plateforme de v-commerce spécialisée dans les produits de mobilier, intégrant des technologies de réalité augmentée (AR) et de réalité virtuelle (VR) pour offrir une expérience d'achat immersive et innovante. Grâce à ces technologies, les utilisateurs peuvent visualiser les produits dans leur environnement via AR et explorer un showroom virtuel en VR, le tout en ligne.",
-    image: "../assets/images/1726764094685-portrait.png", // Remplacer par le chemin réel de l'image
-    link: "#", // Mettre le lien réel du projet si nécessaire
+    image: portrait, // ✅ Use imported variable directly
+    link: "/indar-deco-details", // Internal route
   },
 ];
 
@@ -22,6 +24,7 @@ export default function Projects() {
         >
           Nos Projets
         </motion.h2>
+
         <div className="space-y-12">
           {projects.map((project, index) => (
             <motion.div
@@ -31,6 +34,7 @@ export default function Projects() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
             >
+              {/* Left Section: Text */}
               <div className="w-full lg:w-1/2 p-8 text-left">
                 <h3 className="text-2xl font-semibold text-[#284F75]">
                   {project.name}
@@ -39,17 +43,19 @@ export default function Projects() {
                   {project.description}
                 </p>
                 {project.link && (
-                  <a
-                     href="/indar-deco-details"
+                  <Link
+                    to={project.link} // ✅ Use Link instead of <a>
                     className="mt-4 inline-block text-blue-500 hover:underline"
                   >
                     En savoir plus →
-                  </a>
+                  </Link>
                 )}
               </div>
+
+              {/* Right Section: Image */}
               <div className="w-full lg:w-1/2 flex justify-center items-center">
                 <img
-                  src={project.image}
+                  src={project.image} // ✅ Imported image
                   alt={project.name}
                   className="w-full max-w-xs lg:max-w-md h-auto lg:h-[300px] object-cover"
                 />
