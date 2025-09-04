@@ -1,6 +1,18 @@
 import { motion } from 'framer-motion';
 import heroImage from "../assets/images/hero_image.png";
 function Hero() {
+  const scrollToProjects = () => {
+    const projectsSection = document.getElementById('projets');
+    if (projectsSection) {
+      projectsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
   return (
     <section id="accueil"  className="bg-black py-5 mb-4 lg:py-20 w-full">
       <div  className="my-6 max-w-full mx-auto px-8 p-6 lg:px-28 flex flex-col lg:flex-row items-center ">
@@ -46,6 +58,7 @@ function Hero() {
           >
             <motion.a
               href="#projets"
+              onClick={(e) => { e.preventDefault(); scrollToProjects(); }}
               className="bg-gradient-to-r from-blue-500 to-primaryBlue py-5 px-3 text-white rounded-md baseline hover:to-hoverPrimaryBlue hover:from-secondaryBlue text-center transition-all duration-200 ease-in-out transform hover:scale-105"
               style={{
                 backgroundSize: '200% 200%',
@@ -62,6 +75,7 @@ function Hero() {
 
             <motion.a
               href="#contact"
+              onClick={(e) => { e.preventDefault(); scrollToContact(); }}
               className="mx-5 py-5 px-3 text-white baseline hover:text-grey text-center"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}

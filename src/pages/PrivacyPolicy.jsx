@@ -1,6 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+// ✅ Import logo image
+import logoWhite from "../assets/images/logooooooblanc.png";
+
 export default function PrivacyPolicy() {
   return (
     <div className="bg-white min-h-screen flex flex-col">
@@ -11,7 +14,7 @@ export default function PrivacyPolicy() {
           <div>
             <Link to="/">
               <img
-                src="src/assets/images/logooooooblanc.png"
+                src={logoWhite} // ✅ use imported image
                 className="w-32 md:w-40"
                 alt="Logo Instar"
               />
